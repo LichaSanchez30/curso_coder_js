@@ -215,9 +215,12 @@ productosDeportivos.forEach((producto) => {
         Captura el elemento que se está recorriendo y retorna true o false según la comparación ejecutada. El método retorna el primer elemento que cumple con esa condición.
 */
 
-const busqueda = productosDeportivos.find((el)=>
-    el.nombre==="Raqueta de tenis"
-    
-    );
 
-console.log(busqueda);
+const busqueda = productosDeportivos.find((el)=>
+    el.nombre==="Raqueta de tenis"    
+    );
+  if (busqueda != undefined){
+    console.log(busqueda)
+  }else{
+    console.log("Elemento no econtrado")
+  }
