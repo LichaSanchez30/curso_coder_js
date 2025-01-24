@@ -206,21 +206,34 @@ const productosDeportivos = [
   },
 ];
 
-productosDeportivos.forEach((producto) => {
-  console.log(`Producto:\n${producto.nombre}\nPrecio: $${producto.precio}`);
-});
+// productosDeportivos.forEach((producto) => {
+//   console.log(`Producto:\n${producto.nombre}\nPrecio: $${producto.precio}`);
+// });
 
 /*  
     find(): recibe una función de comparación por parámetro.
-        Captura el elemento que se está recorriendo y retorna true o false según la comparación ejecutada. El método retorna el primer elemento que cumple con esa condición.
+      Captura el elemento que se está recorriendo y retorna true o false según la comparación ejecutada. El método retorna el primer elemento que cumple con esa condición.
 */
 
+/*
+  filter(): muestra todos los elementos que cumplen con la condición.
 
-const busqueda = productosDeportivos.find((el)=>
-    el.nombre==="Raqueta de tenis"    
-    );
-  if (busqueda != undefined){
-    console.log(busqueda)
-  }else{
-    console.log("Elemento no econtrado")
-  }
+*/
+
+// const busqueda = productosDeportivos.filter((el)=>  el.precio < 100  );
+//   if (busqueda != undefined){
+//     console.log(busqueda)
+//   }else{
+//     console.log("Elemento no econtrado")
+//   }
+
+/*
+  some(): 
+    Es una función de busqueda. En vez de retornar el elemento encontrado, retorna true o false según el resultado de la itración de búsqueda.
+
+
+const existe = productosDeportivos.some(prod => prod.nombre == 'Raqueta tenis');
+
+console.log(existe)
+*/
+
