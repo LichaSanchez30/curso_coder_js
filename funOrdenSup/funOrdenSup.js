@@ -237,3 +237,54 @@ const existe = productosDeportivos.some(prod => prod.nombre == 'Raqueta tenis');
 console.log(existe)
 */
 
+/* 
+  Metodo map():
+    un nuevo arreglo con todos los elementos del original transformado según las operaciones de la función enviada por parametros.
+    Transforma el array original y devuelve un nuevo array
+
+
+const listaProd = productosDeportivos.map( prods => {
+/*Armo objeto a retornar
+return {
+    nombre: prods.nombre.toLocaleUpperCase(),
+    precio: prods.precio,
+    categoria: prods.categoria,
+  }
+} )
+
+
+console.log(listaProd);
+*/
+
+/* reduce():
+    Nos permite obtener un único valor tras iterar sobre el array. Funciona como un método que resume el array a un único valor de retorno.
+
+*/
+
+/*const totalCarrito = productosDeportivos.reduce(tiene una función flecha con dos parametros */ /*(acumulador acumula el valor , *//*prodsElemento a iterar) =>acumulador + prods.precio,*/ /*0 Valor inicial del acumulador 
+)
+
+console.log(totalCarrito);*/
+
+
+/* sort():
+    Para ordenar números, basta con restar uno al otro y el orden indica si será ordenado de forma ascendente o descendente.
+    Sintaxias:
+      
+      const numeros = [40, 1, 5, 200]
+
+      numeros.sort((a,b) => a - b) // ordena de forma ascendente;
+      numeros.sort((a,b) => b - a) // ordena en forma descendente;
+*/
+
+/*Ejemplo: ordenar por precio de menor a mayor */
+
+productosDeportivos.sort((a,b) => a.precio - b.precio);
+
+console.log(productosDeportivos);
+
+/*Ordenar por titulo */
+
+productosDeportivos.sort((a,b) => a.nombre.localeCompare(b.nombre))// de la a - z
+
+productosDeportivos.sort((a,b) => b.nombre.localeCompare(a.nombre))// de la z - a
